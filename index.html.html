@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Porfolio</title>
+    <link rel="stylesheet" href="font/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--head section -->
+    <header>
+        <div class="user">
+            <img src="img/31.png"  class="picture">
+            <h3 class="name"> Hariharan.M</h3>
+            <p class="post">Front end Developer</p>
+        </div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">home</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#education">education</a></li>
+            <li><a href="#project">project</a></li>
+            <li><a href="#contact">contact</a></li>
+        </ul>
+    </nav>
+</header>
+ <div id="menu" class="fas fa-bars"></div>
+
+
+  <!--home -->
+<section class="home" id="home">
+    <h3>HI THERE !</h3>
+    <h1> I'M <span> Hariharan M</span></h1>
+    <p> I AM A FRONTEND DEVELOPER. </p>
+    <a href="#about"><button class="btn">about me <i class="fas fa-user"></i></button></a>
+</section>
+
+
+<!--about-->
+<section class="about" id="about">
+    <h1 class="heading"><span>about</span> me</h1>
+    <div class="row">
+
+        <div class="info">
+            <h3><span>name:</span> M.Hariharan</h3>
+            <h3><span>age:</span> 22</h3>
+            <h3><span>qualification:</span> B.TECH IT</h3>
+            <h3><span>post:</span>FrontEnd Developer </h3>
+            <h3><span>cgp:</span> 80%cgp</h3>
+            <h3><span>passout:</span> 2024</h3>
+            <h3><span>Language:</span>Tamil, English</h3>
+            <a href="assets/Hariharan resume.pdf " target="_blank"><button class="btn" >download CV  <i class="fas fa-download"></i></button></a>
+        </div>
+        
+    </div>
+</section>
+
+
+<!---education-->
+<section class="education" id="education">
+<h1 class="heading"> my <span>education</span></h1>
+<div class="box-container">
+    <div class="box">
+        <i class="fas fa-graduation-cap"></i>
+            <span>2018</span>
+            <h3>10th Standard</h3>
+        
+    </div>
+    <div class="box">
+        <i class="fas fa-graduation-cap"></i>
+            <span>2019</span>
+            <h3>11th Standard</h3>
+        
+    </div>
+    <div class="box">
+        <i class="fas fa-graduation-cap">  </i>
+            <span>2020</span>
+            <h3>12th Standard</h3>
+      
+    </div>
+    <div class="box">
+        <i class="fas fa-graduation-cap">  </i>
+            <span>2024</span>
+            <h3>B.TECH Information Technology</h3>
+      
+    </div>
+</div>
+</section>
+
+<!--- portfolio-->
+
+<section class="project" id="project">
+    <h1 class="heading"> my <span>projects</span></h1>
+    <div class="row">
+
+   
+    <div class="counter">
+        <div class="box">
+            <span> Online Blood Bank system</span>
+            <img src="img/blood.jpg" alt="pic1">
+            <h3>The transfusable components that can be derived from donated blood are red cells, platelets, plasma, cryoprecipitated AHF (cryo), and granulocytes. An additional component, white cells, is often removed from donated blood before transfusion.</h3>
+        </div>
+        <div class="box">
+            <span> Gas Pipelines for Hospitals</span>
+            <img src="img/pipeline.jpg" alt="pic1">
+            <h3>The gases are then transported through the pipelines to the point of use, A medical gas pipeline system is a network of pipelines and associated equipment that are designed to supply medical gases to various parts , such as hospitals, clinics, and laboratories.</h3>
+        </div>
+        <div class="box">
+            <span> E-Commerce Website</span>
+            <img src="img/p2.jpg" alt="pic1">
+            <h3>Ecommerce is a method of buying and selling goods and services online. of ecommerce business can also include tactics like affiliate marketing.</h3>
+        </div>
+    </div>
+    </div>
+</section>
+
+<!---contact-->
+<section class="contact" id="contact">
+    <h1 class="heading"> <span>contact</span>me</h1>
+    <div class="row">
+        <div class="content">
+            <h3 class="title">contact info</h3>
+            <div class="info">
+                <h3><i class="fas fa-envelope"></i>mhariharan@gmail.com</h3>
+                <h3><i class="fas fa-phone"></i>+91 9361456577</h3>
+                <h3><i class="fas fa-phone"></i>+91 8845657721</h3>
+                <h3><i class="fas fa-map-marker-alt"></i>India,Tamilnadu -632401</h3>
+            </div>
+        </div>
+        <form name="submit-to-google-sheet">
+            <input type="text"   name="name"class="box" placeholder="name">
+            <input type="email"  name="email" class="box" placeholder="email">
+            <input type="text"  name="project" class="box" placeholder="project">
+            <textarea name="message" id="" cols="30" rows="10" class="box message" placeholder="message"></textarea>
+            <button type="submit" class="btn">Send <i class="fas fa-paper-plane"></i></button>
+    
+        </form>
+        
+    </div>
+   
+
+</section>
+<a href="#"><i class="fa-solid fa-chevron-up"></i></a>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="scripts.js"></script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxUZEdefYAGPlF-ptAnTpnATJQL3ZAhkKqo_MsQ8491u1RT4ySldQlTS5sV91eq7Cl3/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>
